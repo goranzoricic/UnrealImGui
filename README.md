@@ -1,9 +1,14 @@
+This fork
+============
+
+The goal of this fork is to update ImGui to the latest version and make the plugin support UE5.
+
 Unreal ImGui
 ============
 
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
 
-Unreal ImGui is an Unreal Engine 4 plug-in that integrates [Dear ImGui](https://github.com/ocornut/imgui) developed by Omar Cornut.
+Unreal ImGui is an Unreal Engine 5 plug-in that integrates [Dear ImGui](https://github.com/ocornut/imgui) developed by Omar Cornut.
 
 Dear ImGui is an immediate-mode graphical user interface library that is very lightweight and easy to use. It can be very useful when creating debugging tools.
 
