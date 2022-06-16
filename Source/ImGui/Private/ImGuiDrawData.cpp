@@ -23,13 +23,13 @@ void FImGuiDrawList::CopyVertexData(TArray<FSlateVertex>& OutVertexBuffer, const
 		SlateVertex.TexCoords[1] = ImGuiVertex.uv.y;
 		SlateVertex.TexCoords[2] = SlateVertex.TexCoords[3] = 1.f;
 
-#if ENGINE_COMPATIBILITY_LEGACY_CLIPPING_API
 		const FVector2D VertexPosition = Transform.TransformPoint(ImGuiInterops::ToVector2D(ImGuiVertex.pos));
 		SlateVertex.Position[0] = VertexPosition.X;
 		SlateVertex.Position[1] = VertexPosition.Y;
+
+#if ENGINE_COMPATIBILITY_LEGACY_CLIPPING_API
 		SlateVertex.ClipRect = VertexClippingRect;
 #else
-		SlateVertex.Position = Transform.TransformPoint(ImGuiInterops::ToVector2D(ImGuiVertex.pos));
 #endif // ENGINE_COMPATIBILITY_LEGACY_CLIPPING_API
 
 		// Unpack ImU32 color.
